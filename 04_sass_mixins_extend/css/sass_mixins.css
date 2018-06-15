@@ -1,0 +1,68 @@
+@import url("normalize.css");
+/* define a mixin to group styles together */
+h1 {
+  box-shadow: 5px 5px 10px #5d5d5d;
+  border-radius: 90px;
+  padding: 10px;
+  border: 1px solid black;
+  margin: 15px;
+  background-color: #9fd3ff;
+}
+
+p {
+  box-shadow: 5px 5px 10px #5d5d5d;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid black;
+  margin: 15px;
+  background-color: #9fd3ff;
+}
+
+.bluebox, .wide-box {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #0c3ca7;
+  background-color: #39a6e0;
+  box-shadow: 5px 5px 10px #5d5d5d;
+  border-radius: 30px;
+  padding: 10px;
+  float: left;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#9fd3ff), to(#2a6b9b));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #9fd3ff, #2a6b9b);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(top, #9fd3ff, #2a6b9b);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, #9fd3ff, #2a6b9b);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, #9fd3ff, #2a6b9b);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(top, #9fd3ff, #2a6b9b);
+}
+
+.pinkbox {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #0c3ca7;
+  background-color: #39a6e0;
+  box-shadow: 5px 5px 10px #5d5d5d;
+  border-radius: 30px;
+  padding: 10px;
+  float: left;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(pink), to(white));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, pink, white);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(top, pink, white);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, pink, white);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, pink, white);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(top, pink, white);
+}
+
+.wide-box {
+  width: 500px;
+  margin: 0px 5px;
+}

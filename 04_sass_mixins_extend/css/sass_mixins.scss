@@ -1,0 +1,55 @@
+@import url("normalize.css");
+
+/* define a mixin to group styles together */
+
+@mixin box {
+  width: 200px;
+  height: 200px;    
+  border: 2px solid #0c3ca7;
+  background-color: #39a6e0;
+  box-shadow:5px 5px 10px #5d5d5d;
+  border-radius:30px;
+  padding:10px;
+  float:left;    
+}
+//mixins can accept parameters to allow for dynamic customization 
+@mixin shaded-box($xoffset, $yoffset, $rounded-corners){
+  box-shadow:$xoffset $yoffset 10px #5d5d5d;	  
+  border-radius:$rounded-corners;
+  padding:10px;	
+  border:1px solid black;
+  margin:15px;
+  background-color:#9fd3ff;
+}
+// following mixin is modified code from:
+// http://codeboxers.com/straight-sass-gradient-mixin
+@mixin linear-gradient($from, $to) {
+  background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, $from, $to); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, $from, $to); /* FF3.6 */
+  background-image:     -ms-linear-gradient(top, $from, $to); /* IE10 */
+  background-image:      -o-linear-gradient(top, $from, $to); /* Opera 11.10+ */
+  background-image:         linear-gradient(top, $from, $to);  
+}
+h1{  
+  @include shaded-box(5px, 5px, 90px);  
+}
+p{
+  @include shaded-box(5px, 5px, 5px);  
+}
+//use @include to apply a set of styles 
+.bluebox {
+  @include box;
+  @include linear-gradient(#9fd3ff, #2a6b9b);
+}
+.pinkbox{  
+  @include box;
+  @include linear-gradient(pink, white);    
+}
+//Use @extend to extend rules from one style declaration to another
+.wide-box {
+    @extend .bluebox;
+    width: 500px;
+    margin: 0px 5px;
+}
+
